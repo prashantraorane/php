@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcend</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2e6c8;
+        margin: 0;
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin: 0;
+        color: #000000;
+    }
+
+    h2 {
+        font-size: 16px;
+        color: #000000;;
+        margin: 5px 0 20px;
+    }
+
+    p {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        color: #000000;;
+        margin: 0;
+        text-align: left;
+    }
+
+    .action {
+        display: inline-block;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .action :hover {
+        text-decoration: underline;
+    }
+
+    .app-logo {
+        background: url("logo_medium.svg");
+        background-repeat: no-repeat;
+        max-width: 100%;
+        background-position: center;
+        background-size: contain;
+        width: 100px;
+        height: 100px;
+    }
+
+    .app-splash-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .app-label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 2rem;
+    }
+
+    .app-label h3 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .app-label p {
+        margin: 0;
+        padding-top: 0.25rem;
+        padding-left: 0.5rem;
+        font-size: 1rem;
+    }
+
+    main {
+        margin: 0 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0.5rem 0;
+    }
+
+    .contents {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    @media (max-width: 768px) {
+        main {
+            margin: 0;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="app-splash-inner">
+            <div class="app-logo"></div>
+            <div class="app-label">
+                <h3>TRANSCEND</h3>
+                <p>To A Higher Life</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="contents">
+            <div class="items">
+                <p>Hare Krishna, Thank you for visiting!</p>
+            </div>
+            <div class="items">
+                <p>Our new desktop application is here, offering enhanced features and a superior user experience.</p>
+                <p>Download it now and enjoy the upgrade!</p>
+            </div>
+            <div class="items">
+                <p>
+                    Click here to download the desktop app now: <span class="action"
+                        onclick="redirectStore('download')">https://transcendstore.com/downloads</span>
+                </p>
+            </div>
+            <div class="items">
+                <p>
+                    If you have any questions, feel free to email us at
+                    <span class="action" onclick="redirectStore('email')">support@transcendstore.com</span>
+                </p>
+                <p>
+                    or chat
+                    with us on
+                    <span class="action" onclick="redirectStore('store')">www.transcendstore.com</span>
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    function redirectStore(action) {
+        const links = {
+            'download': 'https://transcendstore.com/downloads',
+            'email': 'mailto:support@transcendstore.com',
+            'store': 'https://transcendstore.com'
+        };
+        const link = links[action];
+        if (link) {
+            window.location.href = link;
+        }
+    }
+</script>
+</html>
